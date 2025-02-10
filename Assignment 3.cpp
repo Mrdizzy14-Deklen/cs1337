@@ -1,6 +1,10 @@
+/*
+
+    A simple game of tic tac toe that can be played by 2 players
+
+*/
+
 #include <iostream>
-#include <iomanip>
-#include <string>
 
 using namespace std;
 
@@ -133,7 +137,6 @@ bool check_win(int size, char cboard[][HEIGHT], int moves, int spaces){
 
                     // Increment if it is
                     tempamount++;
-                    cout << tempamount;
 
                     // Check if the player has won
                     if(tempamount >= size){
@@ -190,17 +193,19 @@ bool check_win(int size, char cboard[][HEIGHT], int moves, int spaces){
         }
     }
 
+    // Check for a right diagonal win
     if(cboard[0][0] != '*'){
 
         // Define what player win we're looking for
         char temp = cboard[0][0];
 
-        // Define the number of markers in a row
+        // Define the number of markers
         int tempamount = 0;
+        
         // Loop through the right diagonal 
         for(int i = 0; i < size; i++){
 
-            // Check to see if the row starts with a player marker
+            // Check to see if the marker matches
             if(cboard[i][i] == temp){
                 tempamount++;
 
@@ -220,19 +225,20 @@ bool check_win(int size, char cboard[][HEIGHT], int moves, int spaces){
         }
     }
 
-
-    if(cboard[size - 1][0] != '*'){
+    // Check for a left diagonal win
+    if(cboard[0][size - 1] != '*'){
 
         // Define what player win we're looking for
-        char temp = cboard[size - 1][0];
-
-        // Define the number of markers in a row
+        char temp = cboard[0][size - 1];
+        
+        // Define the number of markers
         int tempamount = 0;
-        // Loop through the right diagonal 
+
+        // Loop through the left diagonal 
         for(int i = 0; i < size; i++){
 
-            // Check to see if the row starts with a player marker
-            if(cboard[i][size - i] == temp){
+            // Check to see if the marker matches
+            if(cboard[i][size - i - 1] == temp){
                 tempamount++;
 
                 // Check if the player has won
