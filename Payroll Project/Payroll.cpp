@@ -14,7 +14,7 @@ int main(){
 
     for(int i = 0; i < 7; i++){
 
-        double rate, hours = -1;
+        double rate = -1, hours = -1;
         
         // Repeatedly prompt rate until valid number is given 
         // (I know I only needed the while loop for the hours but just for good practice)
