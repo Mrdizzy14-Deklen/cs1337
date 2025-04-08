@@ -10,7 +10,7 @@ int main(){
     Payroll arr[7];
 
     // Prompt the user
-    cout << "Enter the hours worked and pay rate for 7 employees:\n";
+    cout << "Enter the hours worked and pay rate for 7 employees:\n\n";
 
     for(int i = 0; i < 7; i++){
 
@@ -24,9 +24,11 @@ int main(){
 
             // Throw an error
             if(rate < 0){
-                cout << "Invalid rate.";
+                cout << "Invalid rate.\n";
             }
         }
+
+        cout << "\n";
         
         // Repeatedly prompt for hours until valid number is given
         while(hours < 0 || hours > 60){
@@ -36,7 +38,7 @@ int main(){
 
             // Throw an error
             if(hours < 0 || hours > 60){
-                cout << "Invalid number of hours.";
+                cout << "Invalid number of hours.\n";
             }
         }
         
@@ -47,9 +49,9 @@ int main(){
     }
 
     // Output the pay amounts
-    cout << "Total pay:";
+    cout << "Total pay:\n\n";
     for(int j = 0; j < 7; j++){
-        cout << "Employee #" << j + 1 << ": " << fixed << setprecision(2) << arr[j].getGross();
+        cout << "Employee #" << j + 1 << ": " << fixed << setprecision(2) << arr[j].getGross() << "\n\n";
 
     }
 
