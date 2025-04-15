@@ -22,12 +22,6 @@ void numDays::setHours(double h){
     days = calcDays();
 }
 
-// Stores day value
-void numDays::setDays(double d){
-    days = d;
-    hours = calcHours();
-}
-
 // + operator
 numDays numDays::operator+(const numDays& x){
     numDays temp;
